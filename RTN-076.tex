@@ -1,7 +1,8 @@
-\documentclass[OPS,authoryear,toc]{lsstdoc}
+\documentclass[OPS,authoryear,lsstdraft,toc]{lsstdoc}
 \input{meta}
 
 % Package imports go here.
+\usepackage{graphicx} 
 
 % Local commands go here.
 
@@ -15,7 +16,7 @@
 % \setDocSubtitle{A subtitle}
 
 \author{%
-Leanne Guy
+Matthew Rumore, Leanne Guy
 }
 
 \setDocRef{RTN-076}
@@ -27,8 +28,9 @@ Leanne Guy
 % \setDocCurator{The Curator of this Document}
 
 \setDocAbstract{%
-The Rubin Documentation Working Group proposed a documentation strategy mapping a
-pathway from the Project’s documentation state to the final deliverable documentation that will become part of the record of completeness and ready for Operations.  This proposal is described in SITCOMTN-014. This technote proposes propose a workflow, implementation plan and timeline to migrate Project documentation deliverables to conform with the documentation strategy described in SITCOMTN-014. 
+The Rubin Documentation Working Group proposed a documentation strategy, \citeds{SITCOMTN-014},  mapping a path for the Rubin Construction Project's documentation to a future-state that will become part of the record of completeness and ready for Operations.  
+This technote proposes a workflow, implementation plan and timeline to migrate Project documentation deliverables to conform with the documentation strategy described in \citeds{SITCOMTN-014}. 
+It responds to charge items 5 and 6 in the \textit{Charge to the Documentation Working Group}, \citeds{LSE-489}.
 }
 
 % Change history defined here.
@@ -36,9 +38,10 @@ pathway from the Project’s documentation state to the final deliverable docume
 % Fields: VERSION, DATE, DESCRIPTION, OWNER NAME.
 % See LPM-51 for version number policy.
 \setDocChangeRecord{%
-  \addtohist{1}{YYYY-MM-DD}{Unreleased.}{Leanne Guy}
+  \addtohist{1}{2024-02-20}{First draft, split out from SITCOMTN-014}{Leanne Guy,Matthew Rumore}
 }
 
+\graphicspath{{figures/}} %Setting the graphicspath
 
 \begin{document}
 
@@ -48,9 +51,12 @@ pathway from the Project’s documentation state to the final deliverable docume
 % use \mkshorttitle to remove the extra pages
 
 % ADD CONTENT HERE
-% You can also use the \input command to include several content files.
+\input{main}
 
 \appendix
+
+% \input{AppendixExamples}
+
 % Include all the relevant bib files.
 % https://lsst-texmf.lsst.io/lsstdoc.html#bibliographies
 \section{References} \label{sec:bib}
@@ -62,9 +68,6 @@ pathway from the Project’s documentation state to the final deliverable docume
 \input{acronyms.tex}
 % If you want glossary uncomment below -- comment out the two lines above
 %\printglossaries
-
-
-
 
 
 \end{document}
